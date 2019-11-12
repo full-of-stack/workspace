@@ -1,0 +1,19 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"lint": "tsc --noEmit && eslint . --cache --fix --ext .ts"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.2",
+		"@types/node": "^12.12.7",
+		"eslint": "^6.6.0",
+		"typescript": "^3.7.2"
+	}
+}
