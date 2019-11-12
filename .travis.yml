@@ -52,8 +52,10 @@ jobs:
 
     - stage: "Client Deploy"
       if: branch = client-develop OR branch = client-master
-      before_script:
+      install:
+        - npm install
       script:
+        - npm run test:src && npm run test:cypress
       deploy:
         provider: script
         script: 
