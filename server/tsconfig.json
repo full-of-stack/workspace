@@ -9,7 +9,7 @@
 		"emitDecoratorMetadata": true,
 		"noUnusedLocals": true,
 		"pretty": true,
-		"rootDir": "src",
+		"rootDir": "./",
 		"outDir": "dist",
 		"baseUrl": ".",
 		"lib": ["esnext"],
@@ -18,5 +18,8 @@
 		},
 		"skipLibCheck": true
 	},
-	"include": ["src/**/*"]
+	"include": ["src/**/*", "bin"],
+    "exclude": [
+		"node_modules"
+    ]
 }

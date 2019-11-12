@@ -1,4 +1,8 @@
+# Custom
 node_modules/
+dist/
+
+# Default
 .DS_Store
 Thumbs.db
 .idea/
