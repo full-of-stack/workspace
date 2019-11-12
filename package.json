@@ -9,10 +9,11 @@
 		"server"
 	],
 	"scripts": {
-		"lint:server": "yarn workspace server lint",
-		"lint:client": "yarn workspace client lint",
-		"lint": "run-p lint:server lint:client",
-		"format": "prettier --write \"**/*.{ts,tsx,css,md}\""
+		"precommit:server": "yarn workspace server precommit",
+		"precommit:client": "yarn workspace client precommit",
+		"precommit": "run-p precommit:server precommit:client",
+		"format": "prettier --write \"**/*.{ts,tsx,css,md}\"",
+		"posttest": "npm run format"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^8.2.0",
@@ -31,17 +32,13 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged",
+			"precommit": "yarn precommit",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
 	"lint-staged": {
 		"*.{ts,tsx,css,md}": [
 			"prettier --write",
-			"git add"
-		],
-		"*.{ts,tsx,js,jsx}": [
-			"eslint --fix",
 			"git add"
 		]
 	}

@@ -5,16 +5,18 @@
 		"moduleResolution": "node",
 		"sourceMap": true,
 		"strict": true,
-		"noUnusedLocals": true,
-		"pretty": true,
-		"rootDir": "/",
-		"outDir": "dist",
-		"baseUrl": ".",
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
+		"noUnusedLocals": true,
+		"pretty": true,
+		"rootDir": "src",
+		"outDir": "dist",
+		"baseUrl": ".",
+		"lib": ["esnext"],
 		"paths": {
 			"*": ["node_modules/*", "src/types/*"]
-		}
+		},
+		"skipLibCheck": true
 	},
-	"include": ["src/**/*", "bin"]
+	"include": ["src/**/*"]
 }
