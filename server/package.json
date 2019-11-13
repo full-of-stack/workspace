@@ -4,14 +4,12 @@
 	"private": true,
 	"workspaces": {
 		"nohoist": [
-			"husky",
-			"eslint"
+			"husky"
 		]
 	},
 	"main": "index.js",
 	"license": "MIT",
 	"dependencies": {
-		"eslint-config-airbnb": "^18.0.1",
 		"eslint-plugin-jest": "^23.0.3",
 		"express": "^4.17.1",
 		"jest": "^24.9.0",
@@ -22,7 +20,6 @@
 		"@typescript-eslint/eslint-plugin": "^2.7.0",
 		"@typescript-eslint/parser": "^2.7.0",
 		"eslint": "^6.6.0",
-		"eslint-config-airbnb-base": "^14.0.0",
 		"eslint-config-prettier": "^6.5.0",
 		"eslint-plugin-import": "^2.18.2",
 		"husky": "^3.0.9",

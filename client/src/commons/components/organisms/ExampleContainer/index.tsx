@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const H1 = styled.h1`color: #2c2c2c;`;
+const H1 = styled.h1`
+  color: #2c2c2c;
+`;
 
 interface Props {
   content: string;

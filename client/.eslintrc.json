@@ -9,9 +9,8 @@
 	},
 	"extends": [
 		"react-app",
-		"airbnb",
-		"plugin:@typescript-eslint/recommended",
-		"prettier/@typescript-eslint"
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
 	],
 	"plugins": ["react", "jest"],
 	"env": {
@@ -29,12 +28,6 @@
 		"jest/no-focused-tests": "error",
 		"jest/no-identical-title": "error",
 		"jest/prefer-to-have-length": "warn",
-		"jest/valid-expect": "error",
-		"import/no-unresolved": "off",
-		"react/jsx-filename-extension": [
-			"error",
-			{ "extensions": [".ts", ".tsx"] }
-		],
-		"import/no-extraneous-dependencies": "off"
+		"jest/valid-expect": "error"
 	}
 }
