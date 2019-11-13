@@ -1,33 +1,32 @@
-import * as express from "express";
+import * as express from 'express';
 // types
-import Request from "../../../../types/Request";
+// import Request from '../../../../types/Request';
 // Controllers
-import createUser from "./controller/createUser";
+import createUser from './controller/createUser';
 
 const router = express.Router();
 
-//전체를 관통할 미들웨어를 이곳에 서술
+// 전체를 관통할 미들웨어를 이곳에 서술
 router.use();
-//parameter를 뽑을 때 사용할 미들웨어
+// parameter를 뽑을 때 사용할 미들웨어
 router.param(
-  "userId",
+  'userId',
   (
-    req: Request,
+    req: express.Request,
     res: express.Response,
     next: express.NextFunction,
     value: any,
-    name: string
+    name: string,
   ) => {
-    //이곳에서 Validation 을 수행함.
-    req.userid = value;
+    // 이곳에서 Validation 을 수행함.
     next();
-  }
+  },
 );
 
-router.get("/:userId/events");
+router.get('/:userId/events');
 router
-  .route("/:userId")
+  .route('/:userId')
   .get()
   .patch();
-router.post("/", createUser);
+router.post('/', createUser);
 export = router;

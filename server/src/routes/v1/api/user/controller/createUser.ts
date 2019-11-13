@@ -1,8 +1,8 @@
-import * as express from "express";
+import * as express from 'express';
 
-import Request from "../../../../../types/Request";
+// import Request from '../../../../../types/Request';
 
-function createUser(req: Request, res: express.Response) {
+function createUser(req: express.Request, res: express.Response) {
   res.send();
 }
 
